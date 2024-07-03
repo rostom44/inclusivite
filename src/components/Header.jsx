@@ -1,6 +1,4 @@
-import SearchIcon from "@mui/icons-material/Search";
 import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
@@ -10,21 +8,17 @@ export default function Header(props) {
 
   return (
     <>
-      <Toolbar sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <Button size="small">Subscribe</Button>
+      <Toolbar sx={{ backgroundColor: "#0393c2", borderColor: "divider" }}>
         <Typography
           component="h2"
           variant="h5"
-          color="inherit"
+          color="white"
           align="center"
           noWrap
           sx={{ flex: 1 }}
         >
           {title}
         </Typography>
-        <IconButton>
-          <SearchIcon />
-        </IconButton>
         <Button variant="outlined" size="small">
           Sign up
         </Button>
@@ -44,6 +38,6 @@ Header.propTypes = {
       title: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
     })
-  ).isRequired,
+  ),
   title: PropTypes.string.isRequired,
 };
