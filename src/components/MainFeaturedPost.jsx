@@ -1,9 +1,9 @@
-import PropTypes from "prop-types";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
-import Link from "@mui/material/Link";
-import Box from "@mui/material/Box";
+import PropTypes from "prop-types";
+import bgImg from "../assets/MainImg.svg";
 
 export default function MainFeaturedPost(props) {
   const { post } = props;
@@ -18,17 +18,12 @@ export default function MainFeaturedPost(props) {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        backgroundImage: `url(${post.image})`,
+        borderRadius: "1rem",
+        height: "25rem",
       }}
     >
       {/* Increase the priority of the hero background image */}
-      {
-        <img
-          style={{ display: "none" }}
-          src={post.image}
-          alt={post.imageText}
-        />
-      }
+
       <Box
         sx={{
           position: "absolute",
@@ -36,32 +31,51 @@ export default function MainFeaturedPost(props) {
           bottom: 0,
           right: 0,
           left: 0,
-          backgroundColor: "rgba(0,0,0,.3)",
+          backgroundColor: "black",
+          background: `url(${bgImg})`,
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          borderRadius: "1rem",
         }}
       />
-      <Grid container>
+      <Grid container sx={{ borderRadius: "1rem" }}>
         <Grid item md={6}>
           <Box
             sx={{
               position: "relative",
-              p: { xs: 3, md: 6 },
+              p: { xs: 2, md: 5 },
               pr: { md: 0 },
             }}
           >
-            <Typography
-              component="h1"
-              variant="h3"
-              color="inherit"
-              gutterBottom
+            <Box
+              sx={{
+                backgroundColor: "rgb(58,112,176,95%)",
+                height: "20rem",
+                p: "1rem",
+                borderRadius: "0.5rem",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+              }}
             >
-              {post.title}
-            </Typography>
-            <Typography variant="h5" color="inherit" paragraph>
-              {post.description}
-            </Typography>
-            <Link variant="subtitle1" href="#">
-              {post.linkText}
-            </Link>
+              <Typography
+                variant="h3"
+                color="inherit"
+                gutterBottom
+                sx={{ fontSize: "2.3rem", m: 0 }}
+              >
+                {post.title}
+              </Typography>
+              <Typography
+                variant="h5"
+                color="inherit"
+                paragraph
+                sx={{ fontSize: "1.3rem", textJustify: "auto" }}
+              >
+                {post.description}
+              </Typography>
+            </Box>
           </Box>
         </Grid>
       </Grid>

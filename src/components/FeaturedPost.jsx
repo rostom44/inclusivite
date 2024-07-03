@@ -1,10 +1,10 @@
-import PropTypes from "prop-types";
-import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import PropTypes from "prop-types";
 
 export default function FeaturedPost(props) {
   const { post } = props;
@@ -12,24 +12,42 @@ export default function FeaturedPost(props) {
   return (
     <Grid item xs={12} md={6}>
       <CardActionArea component="a" href="#">
-        <Card sx={{ display: "flex" }}>
-          <CardContent sx={{ flex: 1 }}>
-            <Typography component="h2" variant="h5">
+        <Card
+          sx={{
+            display: "flex",
+            color: "#2E2E2E",
+            backgroundColor: "#D3EBFF",
+            height: "15rem",
+          }}
+        >
+          <CardContent
+            sx={{
+              pl: "1rem",
+              pt: "1rem",
+              pb: "1rem",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              textJustify: "auto",
+            }}
+          >
+            <Typography component="h2" variant="h5" sx={{ fontWeight: "bold" }}>
               {post.title}
             </Typography>
-            <Typography variant="subtitle1" color="text.secondary">
-              {post.date}
-            </Typography>
+            <Typography variant="subtitle1">{post.date}</Typography>
             <Typography variant="subtitle1" paragraph>
               {post.description}
             </Typography>
-            <Typography variant="subtitle1" color="primary">
-              Continue reading...
+            <Typography variant="subtitle2" paragraph>
+              Lire la suite
             </Typography>
           </CardContent>
           <CardMedia
             component="img"
-            sx={{ width: 160, display: { xs: "none", sm: "block" } }}
+            sx={{
+              width: "40%",
+              display: { xs: "none", sm: "block" },
+            }}
             image={post.image}
             alt={post.imageLabel}
           />
