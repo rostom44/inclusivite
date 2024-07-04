@@ -1,7 +1,15 @@
-import { useState } from 'react';
-import { Dialog, DialogContent, DialogTitle, IconButton, Typography } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
-import { InputLabel, Button, OutlinedInput } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
+import {
+  Button,
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  IconButton,
+  InputLabel,
+  OutlinedInput,
+  Typography,
+} from "@mui/material";
+import { useState } from "react";
 
 const ChatDialog = () => {
   const [open, setOpen] = useState(false);
@@ -15,15 +23,18 @@ const ChatDialog = () => {
   };
 
   return (
-    <div style={{ position: "fixed", bottom: "20px", right: "20px" }}>
+    <div
+      style={{ position: "fixed", bottom: "20px", right: "20px", zIndex: 3 }}
+    >
       <button
         onClick={handleClickOpen}
         style={{
           padding: "15px",
-          background: "#1976d2",
+          background: "#00796B",
           color: "#fff",
           border: "none",
           borderRadius: "4px",
+          "&:hover": { color: "#00796B", border: "1px solid #00796B" },
         }}
       >
         Open Assistance
@@ -38,14 +49,14 @@ const ChatDialog = () => {
             right: "10",
             margin: "0",
             width: "400px",
-            maxHeight: "500px",
+            height: "18rem",
           },
         }}
       >
         <DialogTitle>
           Aladin
           <IconButton
-            aria-label='close'
+            aria-label="close"
             onClick={handleClose}
             style={{ position: "absolute", right: 8, top: 8, color: "#555" }}
           >
@@ -53,13 +64,17 @@ const ChatDialog = () => {
           </IconButton>
         </DialogTitle>
         <DialogContent dividers>
-          <Typography>Bonjour, je suis Aladin, votre IA personnalisée.</Typography>
-          <Typography sx={{ pb: "10px" }}>Que puis-je faire pour vous ?</Typography>
+          <Typography>
+            Bonjour, je suis Aladin, votre IA personnalisée.
+          </Typography>
+          <Typography sx={{ pb: "10px" }}>
+            Que puis-je faire pour vous ?
+          </Typography>
           <InputLabel>Message</InputLabel>
           <OutlinedInput
-            id='outlined-email'
-            type='text'
-            label='Message'
+            id="outlined-email"
+            type="text"
+            label="Message"
             sx={{
               "&.MuiOutlinedInput-root": {
                 borderColor: "#00796B",
@@ -68,11 +83,13 @@ const ChatDialog = () => {
             }}
           />
           <Button
-            type='submit'
+            type="submit"
             sx={{
               backgroundColor: "#00796B",
               color: "white",
               width: "100%",
+              mt: "1rem",
+              "&:hover": { color: "#00796B", border: "1px solid #00796B" },
             }}
           >
             Envoyer

@@ -79,6 +79,7 @@ export default function Newsletter2() {
             color: "white",
             mt: isSmallScreen ? "1rem" : "",
             width: "60%",
+            "&:hover": { color: "#00796B", border: "1px solid #00796B" },
           }}
         >
           Envoyer
