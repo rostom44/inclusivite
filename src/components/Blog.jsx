@@ -12,6 +12,7 @@ import Main from "./Main";
 import MainFeaturedPost from "./MainFeaturedPost";
 import MiseOeuvreCpnt from "./MiseOeuvreCpnt";
 import Sidebar from "./Sidebar";
+import Newsletter2 from "./Newsletter2";
 
 // const sections = [
 //   { title: "Technology", url: "#" },
@@ -98,6 +99,7 @@ export default function Blog() {
               />
             </Grid>
             <MiseOeuvreCpnt />
+            <Newsletter2 />
           </main>
         </Container>
       </Container>
