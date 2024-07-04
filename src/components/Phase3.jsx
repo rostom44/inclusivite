@@ -69,7 +69,7 @@ export default function Phase3() {
         <Box
           component="img"
           src={amélioration}
-          alt="Entretient image"
+          alt="amélioration continue"
           sx={{
             width: isSmallScreen ? "9rem" : "40%",
             ml: isSmallScreen ? "7.5rem" : "",

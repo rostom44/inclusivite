@@ -80,7 +80,7 @@ export default function Mission5() {
         <Box
           component="img"
           src={suivi}
-          alt="Entretient image"
+          alt="suivi du avancement "
           sx={{
             width: isSmallScreen ? "50%" : "45%",
             pt: isSmallScreen ? "0.3rem" : "",

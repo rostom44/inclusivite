@@ -38,7 +38,7 @@ export default function Mission4() {
         <Box
           component="img"
           src={analyse}
-          alt="Entretient image"
+          alt="analyse des données "
           sx={{
             width: isSmallScreen ? "50%" : "45%",
             pt: isSmallScreen ? "0.3rem" : "",

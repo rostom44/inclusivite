@@ -81,7 +81,7 @@ export default function Mission3() {
         <Box
           component="img"
           src={formation}
-          alt="Entretient image"
+          alt="session de formation "
           sx={{
             width: "30%",
             pl: "1rem",

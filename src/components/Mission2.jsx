@@ -38,7 +38,7 @@ export default function Mission2() {
         <Box
           component="img"
           src={women}
-          alt="Entretient image"
+          alt="womens holding hands "
           sx={{
             width: isSmallScreen ? "9rem" : "30%",
             pt: isSmallScreen ? "0.3rem" : "",

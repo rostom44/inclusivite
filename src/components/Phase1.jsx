@@ -68,7 +68,7 @@ export default function Phase1() {
         <Box
           component="img"
           src={devWeb}
-          alt="Entretient image"
+          alt="developpment web "
           sx={{
             width: isSmallScreen ? "9rem" : "40%",
             ml: isSmallScreen ? "7.5rem" : "",
