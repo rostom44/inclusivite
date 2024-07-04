@@ -34,12 +34,12 @@ export default function MainFeaturedPost(props) {
           bottom: 0,
           right: 0,
           left: 0,
-          backgroundColor: "black",
           background: `url(${bgImg})`,
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           borderRadius: "1rem",
+          backgroundColor: "#0A1E4F",
         }}
       />
       <Grid container sx={{ borderRadius: "1rem" }}>
