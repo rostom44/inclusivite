@@ -24,11 +24,10 @@ export default function Mission2() {
           src={women}
           alt="Entretient image"
           sx={{
-            width: "45%",
+            width: "33%",
             pl: "1rem",
             pr: "1rem",
             borderRadius: "2rem",
-            height: "10%",
           }}
         />
         <Box
@@ -48,14 +47,14 @@ export default function Mission2() {
           </Typography>
           <Typography
             component="li"
-            sx={{ pt: "1.25rem", fontSize: "1rem", textJustify: "auto" }}
+            sx={{ pt: "1.5rem", fontSize: "1rem", textJustify: "auto" }}
           >
             <b>Programmes de mentorat</b> : Programmes de mentorat pour soutenir
             les talents issus de groupes sous-représentés.
           </Typography>
           <Typography
             component="li"
-            sx={{ pt: "1.25rem", fontSize: "1rem", textJustify: "auto" }}
+            sx={{ pt: "1.5rem", fontSize: "1rem", textJustify: "auto" }}
           >
             <b>Ressources en ligne</b> : Accès à des modules de formation en
             ligne sur des sujets spécifiques.
