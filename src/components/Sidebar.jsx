@@ -1,14 +1,13 @@
 import { useMediaQuery } from "@mui/material";
 import Grid from "@mui/material/Grid";
-import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
-import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 import Newsletter from "./Newsletter";
+import GraphCpnt from "./GraphCpnt";
 
 export default function Sidebar(props) {
-  const { description, social, title } = props;
+  const { description, title } = props;
   const isSmallScreen = useMediaQuery("(max-width: 428px)");
 
   return (
@@ -17,7 +16,7 @@ export default function Sidebar(props) {
       xs={12}
       md={4}
       sx={{
-        height: "80vh",
+        height: "100vh",
         mt: "3.5rem",
         display: isSmallScreen ? "none" : "",
       }}
@@ -30,23 +29,7 @@ export default function Sidebar(props) {
       </Paper>
 
       <Newsletter />
-      <Typography variant="h6" gutterBottom sx={{ mt: "2rem" }}>
-        Social
-      </Typography>
-      {social.map((network) => (
-        <Link
-          display="block"
-          variant="body1"
-          href="#"
-          key={network.name}
-          sx={{ mb: 0.5 }}
-        >
-          <Stack direction="row" spacing={1} alignItems="center">
-            <network.icon />
-            <span>{network.name}</span>
-          </Stack>
-        </Link>
-      ))}
+      <GraphCpnt />
     </Grid>
   );
 }

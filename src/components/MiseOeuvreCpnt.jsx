@@ -7,7 +7,11 @@ export default function MiseOeuvreCpnt() {
   const isSmallScreen = useMediaQuery("(max-width:428px)");
 
   return (
-    <Container disableGutters maxWidth={false} sx={{ pb: "3rem" }}>
+    <Container
+      disableGutters
+      maxWidth={false}
+      sx={{ pb: "3rem", mt: isSmallScreen ? 0 : "2rem" }}
+    >
       <Typography
         variant="h4"
         gutterBottom

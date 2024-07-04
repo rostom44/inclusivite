@@ -17,8 +17,7 @@ export default function Newsletter() {
       elevation={2}
       sx={{
         width: "100%",
-        height: isSmallScreen ? "50%" : "45%",
-
+        height: "50%",
         mt: "2rem",
       }}
     >
