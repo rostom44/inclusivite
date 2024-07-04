@@ -46,11 +46,6 @@ export default function Newsletter2() {
           diversité. Inscrivez-vous dès aujourd&apos;hui et faites partie du
           changement !
         </Typography>
-        {/* <OutlinedInput
-          label="Email"
-          type="email"
-          sx={{ mt: "0.5rem", height: "3rem", width: "80%" }}
-        /> */}
         <FormControl
           sx={{
             mt: "0.5rem",
@@ -59,11 +54,11 @@ export default function Newsletter2() {
           }}
           variant="outlined"
         >
-          <InputLabel>Email</InputLabel>
+          <InputLabel htmlFor="outlined-email">Email</InputLabel>
           <OutlinedInput
             id="outlined-email"
             type="email"
-            label="Email"
+            aria-label="Email"
             sx={{
               "&.MuiOutlinedInput-root": {
                 borderColor: "#00796B",
