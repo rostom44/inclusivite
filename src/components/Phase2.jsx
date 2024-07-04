@@ -1,7 +1,9 @@
-import { Box, Paper, Typography } from "@mui/material";
+import { Box, Paper, Typography, useMediaQuery } from "@mui/material";
 import communication from "../assets/communication.jpg";
 
 export default function Phase2() {
+  const isSmallScreen = useMediaQuery("(max-width:428px)");
+
   return (
     <Paper
       elevation={2}
@@ -14,29 +16,51 @@ export default function Phase2() {
     >
       <Typography
         variant="h5"
-        sx={{ pt: "1.5rem", pl: "2rem", pb: "1rem", fontWeight: "bold" }}
+        sx={{
+          pt: "1.5rem",
+          pl: "2rem",
+          pb: "1rem",
+          fontWeight: "bold",
+          fontSize: isSmallScreen ? "1rem" : "1.5rem",
+        }}
       >
         Phase 2 : Lancement et Communication
       </Typography>
-      <Box sx={{ display: "flex", width: "100%", gap: "0.5rem" }}>
+      <Box
+        sx={{
+          display: "flex",
+          width: "100%",
+          flexDirection: isSmallScreen ? "column" : "",
+          gap: "0.5rem",
+        }}
+      >
         <Box
           component="ul"
           sx={{
-            width: "55%",
+            width: isSmallScreen ? "80%" : "55%",
+
             ml: "2.5rem",
             listStyle: "none",
           }}
         >
           <Typography
             component="li"
-            sx={{ pt: "1rem", fontSize: "1rem", textJustify: "auto" }}
+            sx={{
+              pt: "1rem",
+              fontSize: isSmallScreen ? "0.7rem" : "1rem",
+              textJustify: "auto",
+            }}
           >
             <b>Promotion</b> : Promouvoir le site web et le service de suivi via
             les réseaux sociaux, des partenariats et des campagnes marketing.
           </Typography>
           <Typography
             component="li"
-            sx={{ pt: "1rem", fontSize: "1rem", textJustify: "auto" }}
+            sx={{
+              pt: "1rem",
+              fontSize: isSmallScreen ? "0.7rem" : "1rem",
+              textJustify: "auto",
+            }}
           >
             <b>Engagement</b>:Encourager l&apos;inscription à la newsletter et
             la participation à la communauté en ligne.
@@ -47,7 +71,8 @@ export default function Phase2() {
           src={communication}
           alt="haut parleur de communication "
           sx={{
-            width: "40%",
+            width: isSmallScreen ? "9rem" : "40%",
+            ml: isSmallScreen ? "7.5rem" : "",
             pl: "1rem",
             pr: "1rem",
             borderRadius: "2rem",

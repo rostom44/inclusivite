@@ -39,7 +39,7 @@ export default function Mission5() {
           component="ul"
           sx={{
             width: isSmallScreen ? "90%" : "55%",
-            ml: "2.5rem",
+            ml: isSmallScreen ? "1.5rem" : "2.5rem",
             listStyle: "none",
           }}
         >

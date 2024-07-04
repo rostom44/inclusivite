@@ -1,3 +1,4 @@
+import { useMediaQuery } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import Paper from "@mui/material/Paper";
@@ -8,9 +9,19 @@ import Newsletter from "./Newsletter";
 
 export default function Sidebar(props) {
   const { description, social, title } = props;
+  const isSmallScreen = useMediaQuery("(max-width: 428px)");
 
   return (
-    <Grid item xs={12} md={4} sx={{ height: "80vh", mt: "3.5rem" }}>
+    <Grid
+      item
+      xs={12}
+      md={4}
+      sx={{
+        height: "80vh",
+        mt: "3.5rem",
+        display: isSmallScreen ? "none" : "",
+      }}
+    >
       <Paper elevation={0} sx={{ p: 2, bgcolor: "grey.200" }}>
         <Typography variant="h6" gutterBottom>
           {title}
