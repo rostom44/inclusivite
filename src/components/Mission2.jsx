@@ -1,5 +1,5 @@
 import { Box, Paper, Typography } from "@mui/material";
-import entretient from "../assets/entretient.jpeg";
+import women from "../assets/femme-circle.jpg";
 
 export default function Mission2() {
   return (
@@ -21,13 +21,14 @@ export default function Mission2() {
       <Box sx={{ display: "flex", width: "100%", gap: "0.5rem", pt: "1rem" }}>
         <Box
           component="img"
-          src={entretient}
+          src={women}
           alt="Entretient image"
           sx={{
             width: "45%",
             pl: "1rem",
             pr: "1rem",
             borderRadius: "2rem",
+            height: "10%",
           }}
         />
         <Box

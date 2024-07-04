@@ -1,5 +1,5 @@
 import { Box, Paper, Typography } from "@mui/material";
-import entretient from "../assets/entretient.jpeg";
+import formation from "../assets/formation.jpg";
 
 export default function Mission3() {
   return (
@@ -52,7 +52,7 @@ export default function Mission3() {
         </Box>
         <Box
           component="img"
-          src={entretient}
+          src={formation}
           alt="Entretient image"
           sx={{
             width: "45%",
