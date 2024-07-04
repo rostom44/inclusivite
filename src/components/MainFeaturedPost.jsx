@@ -1,3 +1,4 @@
+import { useMediaQuery } from "@mui/material";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
@@ -7,6 +8,7 @@ import bgImg from "../assets/MainImg.svg";
 
 export default function MainFeaturedPost(props) {
   const { post } = props;
+  const isSmallScreen = useMediaQuery("(max-width:428px)");
 
   return (
     <Paper
@@ -20,7 +22,7 @@ export default function MainFeaturedPost(props) {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         borderRadius: "1rem",
-        height: "25rem",
+        height: isSmallScreen ? "18rem" : "25rem",
       }}
     >
       {/* Increase the priority of the hero background image */}
@@ -51,8 +53,10 @@ export default function MainFeaturedPost(props) {
           >
             <Box
               sx={{
-                backgroundColor: "rgb(58,112,176,95%)",
-                height: "20rem",
+                backgroundColor: isSmallScreen
+                  ? "rgb(58,112,176,85%)"
+                  : "rgb(58,112,176,95%)",
+                height: isSmallScreen ? "15rem" : "20rem",
                 p: "1rem",
                 borderRadius: "0.5rem",
                 display: "flex",
@@ -64,7 +68,7 @@ export default function MainFeaturedPost(props) {
                 variant="h3"
                 color="inherit"
                 gutterBottom
-                sx={{ fontSize: "2.3rem", m: 0 }}
+                sx={{ fontSize: isSmallScreen ? "1.7rem" : "2.3rem", m: 0 }}
               >
                 {post.title}
               </Typography>
@@ -72,7 +76,10 @@ export default function MainFeaturedPost(props) {
                 variant="h5"
                 color="inherit"
                 paragraph
-                sx={{ fontSize: "1.3rem", textJustify: "auto" }}
+                sx={{
+                  fontSize: isSmallScreen ? "1rem" : "1.3rem",
+                  textJustify: "auto",
+                }}
               >
                 {post.description}
               </Typography>

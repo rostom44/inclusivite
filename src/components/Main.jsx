@@ -1,9 +1,12 @@
+import { useMediaQuery } from "@mui/material";
+import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import Divider from "@mui/material/Divider";
 import MissionCpnt from "./MissionCpnt";
 
 export default function Main() {
+  const isSmallScreen = useMediaQuery("(max-width:428px)");
+
   return (
     <Grid
       item
@@ -15,8 +18,12 @@ export default function Main() {
         },
       }}
     >
-      <Typography variant="h4" gutterBottom sx={{ fontWeight: "bold" }}>
-        Service de Suivi en 6 Étapes
+      <Typography
+        variant="h4"
+        gutterBottom
+        sx={{ fontWeight: "bold", fontSize: isSmallScreen ? "1.5rem" : "2rem" }}
+      >
+        Service de suivi en 6 étapes
       </Typography>
       <Divider />
       <MissionCpnt />

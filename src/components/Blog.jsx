@@ -10,8 +10,8 @@ import FeaturedPost from "./FeaturedPost";
 import Header from "./Header";
 import Main from "./Main";
 import MainFeaturedPost from "./MainFeaturedPost";
-import Sidebar from "./Sidebar";
 import MiseOeuvreCpnt from "./MiseOeuvreCpnt";
+import Sidebar from "./Sidebar";
 
 // const sections = [
 //   { title: "Technology", url: "#" },
@@ -47,7 +47,7 @@ const featuredPosts = [
     title: "La diversité et l’inclusion",
     date: "Mars 11",
     description:
-      "Communiquer de façon ouverte et transparente au sujet des avancées réalisées en rapport avec les priorités...",
+      "Communiquer de façon ouverte et transparente au sujet des avancées ...",
     image: graph,
     imageLabel: "Image Text",
   },

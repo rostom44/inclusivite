@@ -1,10 +1,11 @@
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import Button from "@mui/material/Button";
 import Toolbar from "@mui/material/Toolbar";
 import PropTypes from "prop-types";
 import logo from "../assets/logo_innovaTeam3.png";
 
 export default function Header() {
+  const isSmallScreen = useMediaQuery("(max-width:428px)");
   return (
     <>
       <Toolbar
@@ -15,7 +16,13 @@ export default function Header() {
           justifyContent: "space-between",
         }}
       >
-        <Box sx={{ width: "55%", display: "flex", justifyContent: "flex-end" }}>
+        <Box
+          sx={{
+            width: "55%",
+            display: "flex",
+            justifyContent: isSmallScreen ? "flex-start" : "flex-end",
+          }}
+        >
           <Box
             component="img"
             src={logo}
