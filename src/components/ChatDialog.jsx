@@ -21,15 +21,18 @@ const ChatDialog = () => {
   };
 
   return (
-    <div style={{ position: "fixed", bottom: "20px", right: "20px" }}>
+    <div
+      style={{ position: "fixed", bottom: "20px", right: "20px", zIndex: 3 }}
+    >
       <button
         onClick={handleClickOpen}
         style={{
           padding: "15px",
-          background: "#1976d2",
+          background: "#00796B",
           color: "#fff",
           border: "none",
           borderRadius: "4px",
+          "&:hover": { color: "#00796B", border: "1px solid #00796B" },
         }}
         aria-label="Open Assistance"
       >
@@ -45,13 +48,14 @@ const ChatDialog = () => {
             right: "10",
             margin: "0",
             width: "400px",
-            maxHeight: "500px",
+            height: "18rem",
           },
         }}
       >
         <DialogTitle>
           Aladin
           <IconButton
+            aria-label="close"
             aria-label="close"
             onClick={handleClose}
             style={{ position: "absolute", right: 8, top: 8, color: "#555" }}
@@ -87,6 +91,8 @@ const ChatDialog = () => {
               backgroundColor: "#00796B",
               color: "white",
               width: "100%",
+              mt: "1rem",
+              "&:hover": { color: "#00796B", border: "1px solid #00796B" },
             }}
           >
             Envoyer
