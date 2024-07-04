@@ -82,7 +82,7 @@ export default function Mission1() {
         <Box
           component="img"
           src={entretient}
-          alt="Entretient image"
+          alt="Entretient "
           sx={{
             width: isSmallScreen ? "50%" : "45%",
             pt: isSmallScreen ? "0.3rem" : "",

@@ -46,7 +46,7 @@ export default function Phase3() {
         <Box
           component="img"
           src={amélioration}
-          alt="Entretient image"
+          alt="amélioration continue"
           sx={{
             width: "40%",
             pl: "1rem",

@@ -45,7 +45,7 @@ export default function Phase2() {
         <Box
           component="img"
           src={communication}
-          alt="Entretient image"
+          alt="haut parleur de communication "
           sx={{
             width: "40%",
             pl: "1rem",
