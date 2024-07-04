@@ -1,33 +1,40 @@
+import { Box } from "@mui/material";
 import Button from "@mui/material/Button";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
+import logo from "../assets/logo_innovaTeam3.png";
 
-export default function Header(props) {
-  const { title } = props;
-
+export default function Header() {
   return (
     <>
-      <Toolbar sx={{ backgroundColor: "#0393c2", borderColor: "divider" }}>
-        <Typography
-          component="h2"
-          variant="h5"
-          color="white"
-          align="center"
-          noWrap
-          sx={{ flex: 1 }}
+      <Toolbar
+        sx={{
+          backgroundColor: "#0393c2",
+          borderColor: "divider",
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
+        <Box sx={{ width: "55%", display: "flex", justifyContent: "flex-end" }}>
+          <Box
+            component="img"
+            src={logo}
+            alt="Logo InnovaTeam"
+            sx={{ height: "5rem" }}
+          />
+        </Box>
+        <Button
+          variant="outlined"
+          size="small"
+          sx={{
+            color: "#3A70B0",
+            backgroundColor: "white",
+            height: "2.5rem",
+          }}
         >
-          {title}
-        </Typography>
-        <Button variant="outlined" size="small">
           Sign up
         </Button>
       </Toolbar>
-      <Toolbar
-        component="nav"
-        variant="dense"
-        sx={{ justifyContent: "space-between", overflowX: "auto" }}
-      ></Toolbar>
     </>
   );
 }
