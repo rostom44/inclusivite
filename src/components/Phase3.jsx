@@ -1,7 +1,9 @@
-import { Box, Paper, Typography } from "@mui/material";
+import { Box, Paper, Typography, useMediaQuery } from "@mui/material";
 import amélioration from "../assets/amélioration.jpg";
 
 export default function Phase3() {
+  const isSmallScreen = useMediaQuery("(max-width:428px)");
+
   return (
     <Paper
       elevation={2}
@@ -14,22 +16,39 @@ export default function Phase3() {
     >
       <Typography
         variant="h5"
-        sx={{ pt: "1.5rem", pl: "2rem", pb: "1rem", fontWeight: "bold" }}
+        sx={{
+          pt: "1.5rem",
+          pl: "2rem",
+          pb: "1rem",
+          fontWeight: "bold",
+          fontSize: isSmallScreen ? "1rem" : "1.5rem",
+        }}
       >
         Phase 3 : Évaluation et Amélioration Continue
       </Typography>
-      <Box sx={{ display: "flex", width: "100%", gap: "0.5rem" }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: isSmallScreen ? "column" : "",
+          width: "100%",
+          gap: "0.5rem",
+        }}
+      >
         <Box
           component="ul"
           sx={{
-            width: "55%",
+            width: isSmallScreen ? "80%" : "55%",
             ml: "2.5rem",
             listStyle: "none",
           }}
         >
           <Typography
             component="li"
-            sx={{ pt: "1rem", fontSize: "1rem", textJustify: "auto" }}
+            sx={{
+              pt: "1rem",
+              fontSize: isSmallScreen ? "0.7rem" : "1rem",
+              textJustify: "auto",
+            }}
           >
             <b>Suivi des métriques</b> : Suivre les métriques clés
             (inscriptions, taux d&apos;ouverture de la newsletter, participation
@@ -37,7 +56,11 @@ export default function Phase3() {
           </Typography>
           <Typography
             component="li"
-            sx={{ pt: "1rem", fontSize: "1rem", textJustify: "auto" }}
+            sx={{
+              pt: "1rem",
+              fontSize: isSmallScreen ? "0.7rem" : "1rem",
+              textJustify: "auto",
+            }}
           >
             <b>Feedback et ajustements</b>:Recueillir des feedbacks des
             utilisateurs et ajuster les services en conséquence.
@@ -48,7 +71,8 @@ export default function Phase3() {
           src={amélioration}
           alt="Entretient image"
           sx={{
-            width: "40%",
+            width: isSmallScreen ? "9rem" : "40%",
+            ml: isSmallScreen ? "7.5rem" : "",
             pl: "1rem",
             pr: "1rem",
             borderRadius: "2rem",

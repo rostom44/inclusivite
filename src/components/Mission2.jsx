@@ -40,7 +40,7 @@ export default function Mission2() {
           src={women}
           alt="Entretient image"
           sx={{
-            width: isSmallScreen ? "9rem" : "35%",
+            width: isSmallScreen ? "9rem" : "30%",
             pt: isSmallScreen ? "0.3rem" : "",
             pl: "1rem",
             pr: "1rem",

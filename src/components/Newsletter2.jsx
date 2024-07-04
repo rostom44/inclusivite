@@ -9,17 +9,20 @@ import {
   useMediaQuery,
 } from "@mui/material";
 
-export default function Newsletter() {
+export default function Newsletter2() {
   const isSmallScreen = useMediaQuery("(max-width: 428px)");
+  const isLargeScreen = useMediaQuery("(min-width: 429px)");
 
   return (
     <Paper
       elevation={2}
       sx={{
+        display: isLargeScreen ? "none" : "",
         width: "100%",
         height: isSmallScreen ? "50%" : "45%",
-
-        mt: "2rem",
+        mt: "1rem",
+        mb: "2rem",
+        pb: "1rem",
       }}
     >
       <Box
