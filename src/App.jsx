@@ -1,8 +1,14 @@
 import "./App.css";
 import Blog from "./components/Blog";
+import ChatDialog from './components/ChatDialog';
 
 function App() {
-  return <Blog />;
+  return (
+    <>
+      <ChatDialog />
+      <Blog />
+    </>
+  );
 }
 
 export default App;
