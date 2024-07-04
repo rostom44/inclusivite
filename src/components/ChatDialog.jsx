@@ -56,7 +56,6 @@ const ChatDialog = () => {
           Aladin
           <IconButton
             aria-label="close"
-            aria-label="close"
             onClick={handleClose}
             style={{ position: "absolute", right: 8, top: 8, color: "#555" }}
           >
