@@ -47,7 +47,7 @@ export default function Phase2() {
           src={communication}
           alt="Entretient image"
           sx={{
-            width: "45%",
+            width: "40%",
             pl: "1rem",
             pr: "1rem",
             borderRadius: "2rem",

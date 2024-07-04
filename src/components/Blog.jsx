@@ -1,5 +1,4 @@
 import FacebookIcon from "@mui/icons-material/Facebook";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import XIcon from "@mui/icons-material/X";
 import Container from "@mui/material/Container";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -66,7 +65,6 @@ const sidebar = {
     { title: "subTitle 5", url: "#" },
   ],
   social: [
-    { name: "GitHub", icon: GitHubIcon },
     { name: "X", icon: XIcon },
     { name: "Facebook", icon: FacebookIcon },
   ],

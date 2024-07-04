@@ -4,9 +4,10 @@ import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
+import Newsletter from "./Newsletter";
 
 export default function Sidebar(props) {
-  const { archives, description, social, title } = props;
+  const { description, social, title } = props;
 
   return (
     <Grid item xs={12} md={4} sx={{ height: "80vh", mt: "3.5rem" }}>
@@ -16,20 +17,9 @@ export default function Sidebar(props) {
         </Typography>
         <Typography>{description}</Typography>
       </Paper>
-      <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
-        Archives
-      </Typography>
-      {archives.map((archive) => (
-        <Link
-          display="block"
-          variant="body1"
-          href={archive.url}
-          key={archive.title}
-        >
-          {archive.title}
-        </Link>
-      ))}
-      <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
+
+      <Newsletter />
+      <Typography variant="h6" gutterBottom sx={{ mt: "2rem" }}>
         Social
       </Typography>
       {social.map((network) => (

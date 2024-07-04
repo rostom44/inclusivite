@@ -55,7 +55,7 @@ export default function Mission3() {
           src={formation}
           alt="Entretient image"
           sx={{
-            width: "45%",
+            width: "35%",
             pl: "1rem",
             pr: "1rem",
             borderRadius: "2rem",
