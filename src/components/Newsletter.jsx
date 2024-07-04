@@ -55,7 +55,7 @@ export default function Newsletter() {
           }}
           variant="outlined"
         >
-          <InputLabel htmlFor="outlined-email">Email</InputLabel>{" "}
+          <InputLabel htmlFor="outlined-email">Email</InputLabel>
           <OutlinedInput
             id="outlined-email"
             type="email"
