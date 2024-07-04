@@ -17,8 +17,7 @@ export default function Newsletter() {
       elevation={2}
       sx={{
         width: "100%",
-        height: isSmallScreen ? "50%" : "45%",
-
+        height: "50%",
         mt: "2rem",
       }}
     >
@@ -76,6 +75,7 @@ export default function Newsletter() {
             color: "white",
             mt: isSmallScreen ? "1rem" : "",
             width: "60%",
+            "&:hover": { color: "#00796B", border: "1px solid #00796B" },
           }}
         >
           Envoyer

@@ -9,7 +9,7 @@ export default function MissionCpnt() {
   return (
     <Container
       disableGutters
-      sx={{ width: "100%", height: "90vh", overflowY: "auto" }}
+      sx={{ width: "100%", height: "120vh", overflowY: "auto" }}
     >
       <Mission1 />
       <Mission2 />
