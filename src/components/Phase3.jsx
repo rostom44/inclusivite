@@ -1,5 +1,5 @@
 import { Box, Paper, Typography } from "@mui/material";
-import entretient from "../assets/entretient.jpeg";
+import amélioration from "../assets/amélioration.jpg";
 
 export default function Phase3() {
   return (
@@ -45,7 +45,7 @@ export default function Phase3() {
         </Box>
         <Box
           component="img"
-          src={entretient}
+          src={amélioration}
           alt="Entretient image"
           sx={{
             width: "45%",
