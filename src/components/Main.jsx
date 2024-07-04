@@ -1,7 +1,6 @@
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
-import { Container } from "@mui/material";
 import MissionCpnt from "./MissionCpnt";
 
 export default function Main() {
@@ -16,16 +15,11 @@ export default function Main() {
         },
       }}
     >
-      <Typography variant="h4" gutterBottom>
-        Notre Mission
+      <Typography variant="h4" gutterBottom sx={{ fontWeight: "bold" }}>
+        Service de Suivi en 6 Étapes
       </Typography>
       <Divider />
       <MissionCpnt />
-      <Typography variant="h4" gutterBottom>
-        Nos Articles
-      </Typography>
-      <Divider />
-      <Container component="section" disableGutters></Container>
     </Grid>
   );
 }

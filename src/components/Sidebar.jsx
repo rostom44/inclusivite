@@ -1,15 +1,15 @@
-import PropTypes from "prop-types";
 import Grid from "@mui/material/Grid";
-import Stack from "@mui/material/Stack";
-import Paper from "@mui/material/Paper";
-import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
+import Paper from "@mui/material/Paper";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import PropTypes from "prop-types";
 
 export default function Sidebar(props) {
   const { archives, description, social, title } = props;
 
   return (
-    <Grid item xs={12} md={4}>
+    <Grid item xs={12} md={4} sx={{ height: "80vh", mt: "3.5rem" }}>
       <Paper elevation={0} sx={{ p: 2, bgcolor: "grey.200" }}>
         <Typography variant="h6" gutterBottom>
           {title}

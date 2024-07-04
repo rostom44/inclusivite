@@ -8,11 +8,11 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import graph from "../assets/graph2.png";
 import thinking from "../assets/thinking.svg";
 import FeaturedPost from "./FeaturedPost";
-import Footer from "./Footer";
 import Header from "./Header";
 import Main from "./Main";
 import MainFeaturedPost from "./MainFeaturedPost";
 import Sidebar from "./Sidebar";
+import MiseOeuvreCpnt from "./MiseOeuvreCpnt";
 
 // const sections = [
 //   { title: "Technology", url: "#" },
@@ -99,13 +99,10 @@ export default function Blog() {
                 social={sidebar.social}
               />
             </Grid>
+            <MiseOeuvreCpnt />
           </main>
         </Container>
       </Container>
-      <Footer
-        title="Footer"
-        description="Something here to give the footer a purpose!"
-      />
     </ThemeProvider>
   );
 }
