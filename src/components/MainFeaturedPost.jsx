@@ -65,7 +65,7 @@ export default function MainFeaturedPost(props) {
               }}
             >
               <Typography
-                variant="h3"
+                variant="h1"
                 color="inherit"
                 gutterBottom
                 sx={{ fontSize: isSmallScreen ? "1.7rem" : "2.3rem", m: 0 }}
