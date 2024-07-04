@@ -45,7 +45,7 @@ export default function FeaturedPost(props) {
               {post.title}
             </Typography>
             <Typography
-              variant="subtitle1"
+              variant="h3"
               sx={{ fontSize: isSmallScreen ? "0.8rem" : "1rem" }}
             >
               {post.date}
