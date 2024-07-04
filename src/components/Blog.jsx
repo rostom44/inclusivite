@@ -54,9 +54,9 @@ const featuredPosts = [
 ];
 
 const sidebar = {
-  title: "About",
+  title: "Mission",
   description:
-    "Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.",
+    "Bâtir une communauté professionnelle diversifiée et inclusive où chaque personne, quelle que soit son origine, son genre, son orientation sexuelle, sa capacité ou toute autre caractéristique, se sent respectée, valorisée,s et encouragée à atteindre son plein potentiel.",
   archives: [
     { title: "subTitle 1", url: "#" },
     { title: "subTitle 2", url: "#" },
