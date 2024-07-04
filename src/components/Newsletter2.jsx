@@ -54,11 +54,11 @@ export default function Newsletter2() {
           }}
           variant="outlined"
         >
-          <InputLabel htmlFor="outlined-email">Email</InputLabel>
+          <InputLabel htmlFor="outlined-email2">Email</InputLabel>
           <OutlinedInput
-            id="outlined-email"
+            id="outlined-email2"
             type="email"
-            aria-label="Email"
+            aria-label="Email2"
             sx={{
               "&.MuiOutlinedInput-root": {
                 borderColor: "#00796B",
